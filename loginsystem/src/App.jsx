@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import ManageUsers from './pages/ManageUsers';
-import AllAttendance from './pages/AllAttendance';
+// import AllAttendance from './pages/AllAttendance';
 import ViewAttendance from './pages/ViewAttendance';
 import StudentsList from './pages/StudentsList';
 import Profile from './pages/Profile';
@@ -84,14 +84,14 @@ function App() {
               </RoleBasedRoute>
             } 
           />
-          <Route 
+          {/* <Route 
             path="/attendance/all" 
             element={
               <RoleBasedRoute allowedRoles={['admin']}>
                 <AllAttendance />
               </RoleBasedRoute>
             } 
-          />
+          /> */}
           
           {/* TEACHER ONLY ROUTES */}
           <Route 

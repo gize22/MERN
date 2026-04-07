@@ -134,40 +134,8 @@ const Profile = () => {
           </div>
         </div>
         
-        {/* Stats Card (for students) */}
-        {user?.role === 'student' && attendanceSummary && (
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-xl font-semibold mb-4">Attendance Summary</h2>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Total Days:</span>
-                  <span className="font-bold">{attendanceSummary.total}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-green-600">Present:</span>
-                  <span className="font-bold text-green-600">{attendanceSummary.present}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-red-600">Absent:</span>
-                  <span className="font-bold text-red-600">{attendanceSummary.absent}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-yellow-600">Late:</span>
-                  <span className="font-bold text-yellow-600">{attendanceSummary.late}</span>
-                </div>
-                <div className="border-t pt-3 mt-2">
-                  <div className="flex justify-between">
-                    <span className="font-semibold">Percentage:</span>
-                    <span className="font-bold text-blue-600 text-lg">
-                      {attendanceSummary.attendancePercentage}%
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+       
+        
       </div>
     </div>
   );

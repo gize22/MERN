@@ -24,7 +24,7 @@ const Sidebar = () => {
         return [
           ...commonMenus,
           { path: '/users', name: 'View Users' },
-          { path: '/attendance/all', name: 'All Attendance' },
+          // { path: '/attendance/all', name: 'All Attendance' },
            { path: '/profile', name: 'My Profile' },
         ];
       
