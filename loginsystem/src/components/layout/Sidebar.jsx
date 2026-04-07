@@ -25,6 +25,7 @@ const Sidebar = () => {
           ...commonMenus,
           { path: '/users', name: 'View Users' },
           { path: '/attendance/all', name: 'All Attendance' },
+           { path: '/profile', name: 'My Profile' },
         ];
       
       case 'teacher':
@@ -33,6 +34,7 @@ const Sidebar = () => {
           { path: '/attendance/mark', name: 'Mark Attendance' },
           { path: '/attendance/view', name: 'View Records' },
           { path: '/students', name: 'My Students' },
+           { path: '/profile', name: 'My Profile' },
         ];
       
       case 'student':

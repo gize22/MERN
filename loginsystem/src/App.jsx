@@ -92,14 +92,6 @@ function App() {
               </RoleBasedRoute>
             } 
           />
-          {/* <Route 
-            path="/reports" 
-            element={
-              <RoleBasedRoute allowedRoles={['admin']}>
-                <Reports />
-              </RoleBasedRoute>
-            } 
-          /> */}
           
           {/* TEACHER ONLY ROUTES */}
           <Route 
