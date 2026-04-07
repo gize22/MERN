@@ -32,7 +32,7 @@ const Sidebar = () => {
         return [
           ...commonMenus,
           { path: '/attendance/mark', name: 'Mark Attendance' },
-          { path: '/attendance/view', name: 'View Records' },
+          // { path: '/attendance/view', name: 'View Records' },
           { path: '/students', name: 'My Students' },
            { path: '/profile', name: 'My Profile' },
         ];
