@@ -59,7 +59,8 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-green-100">
+      {/*bg-green-100 100- yemiyamelektew ye color demak new weys debzaza yemilewn new tnsh kutr kehone debzaza yihonal */}
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         
         {/* Header */}
