@@ -16,3 +16,34 @@ Step 9: Build Role-Based Dashboards
 Step 10: Implement Attendance Features (mark/view)
 Step 11: Add Admin Management Features
 Step 12: Final Testing & Integration
+
+Step 4: Building the Layout Components (Navbar, Sidebar, Footer)
+Before we write code, let me explain what we're building and why:
+
+The Layout Concept
+text
+┌─────────────────────────────────────────┐
+│              NAVBAR (top bar)           │
+│  Logo | Dashboard | User Name | Logout  │
+├──────────┬──────────────────────────────┤
+│          │                              │
+│ SIDEBAR  │      MAIN CONTENT            │
+│ (Menu)   │      (Page content           │
+│          │       changes here)           │
+│          │                              │
+├──────────┴──────────────────────────────┤
+│              FOOTER                      │
+│         Copyright © 2025                 │
+└─────────────────────────────────────────┘
+Why this structure?
+Navbar: Always visible, shows user info, logout button
+
+Sidebar: Changes based on user role (Admin sees more options than Student)
+
+Footer: Static info at bottom
+
+Main content: Where different pages load (Dashboard, Attendance, etc.)
+
+
+
+
