@@ -25,7 +25,7 @@ const Navbar = () => {
     // flex = display flex (for horizontal layout)
     // justify-between = space between left and right content
     // items-center = vertically center content
-    <nav className="bg-blue-500 text-white p-4 shadow-lg flex justify-between items-center">
+    <nav className="bg-blue-500 text-white p-4 shadow-lg flex justify-between items-center" >
       
       {/* Left side - Logo and App Name */}
       <div className="flex items-center space-x-4">

@@ -15,7 +15,7 @@ const Sidebar = () => {
   const getMenuItems = () => {
     // Common menu items for ALL users
     const commonMenus = [
-      { path: '/dashboard', name: 'Dashboard', icon: '📊' },
+      { path: '/dashboard', name: 'Dashboard' },
     ];
 
     // Role-specific menu items
@@ -24,23 +24,23 @@ const Sidebar = () => {
         return [
           ...commonMenus,
           { path: '/users', name: 'Manage Users', icon: '👥' },
-          { path: '/attendance/all', name: 'All Attendance', icon: '📋' },
-          { path: '/reports', name: 'Reports', icon: '📈' },
+          { path: '/attendance/all', name: 'All Attendance' },
+          { path: '/reports', name: 'Reports' },
         ];
       
       case 'teacher':
         return [
           ...commonMenus,
-          { path: '/attendance/mark', name: 'Mark Attendance', icon: '✅' },
-          { path: '/attendance/view', name: 'View Records', icon: '👀' },
-          { path: '/students', name: 'My Students', icon: '🎓' },
+          { path: '/attendance/mark', name: 'Mark Attendance' },
+          { path: '/attendance/view', name: 'View Records' },
+          { path: '/students', name: 'My Students' },
         ];
       
       case 'student':
         return [
           ...commonMenus,
-          { path: '/my-attendance', name: 'My Attendance', icon: '📅' },
-          { path: '/profile', name: 'My Profile', icon: '👤' },
+          { path: '/my-attendance', name: 'My Attendance' },
+          { path: '/profile', name: 'My Profile' },
         ];
       
       default:
