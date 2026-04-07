@@ -14,7 +14,6 @@ import AllAttendance from './pages/AllAttendance';
 import ViewAttendance from './pages/ViewAttendance';
 import StudentsList from './pages/StudentsList';
 import Profile from './pages/Profile';
-import Reports from './pages/Reports';
 import MarkAttendance from './pages/MarkAttendance';
 import MyAttendance from './pages/MyAttendance';
 
@@ -93,14 +92,14 @@ function App() {
               </RoleBasedRoute>
             } 
           />
-          <Route 
+          {/* <Route 
             path="/reports" 
             element={
               <RoleBasedRoute allowedRoles={['admin']}>
                 <Reports />
               </RoleBasedRoute>
             } 
-          />
+          /> */}
           
           {/* TEACHER ONLY ROUTES */}
           <Route 
