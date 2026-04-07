@@ -9,6 +9,14 @@ import Layout from './components/layout/Layout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import ManageUsers from './pages/ManageUsers';
+import AllAttendance from './pages/AllAttendance';
+import ViewAttendance from './pages/ViewAttendance';
+import StudentsList from './pages/StudentsList';
+import Profile from './pages/Profile';
+import Reports from './pages/Reports';
+import MarkAttendance from './pages/MarkAttendance';
+import MyAttendance from './pages/MyAttendance';
 
 // Protected Route Components
 import ProtectedRoute from './components/ProtectedRoute';
@@ -16,14 +24,14 @@ import RoleBasedRoute from './components/RoleBasedRoute';
 
 // Placeholder components for pages we'll build later
 // These will be replaced with actual components in future steps
-const ManageUsers = () => <div className="text-center py-10">Manage Users Page (Admin Only)</div>;
-const MarkAttendance = () => <div className="text-center py-10">Mark Attendance Page (Teacher Only)</div>;
-const MyAttendance = () => <div className="text-center py-10">My Attendance Page (Student Only)</div>;
-const AllAttendance = () => <div className="text-center py-10">All Attendance Records (Admin Only)</div>;
-const Reports = () => <div className="text-center py-10">Reports Page (Admin Only)</div>;
-const StudentsList = () => <div className="text-center py-10">My Students Page (Teacher Only)</div>;
-const ViewAttendance = () => <div className="text-center py-10">View Attendance Records (Teacher Only)</div>;
-const Profile = () => <div className="text-center py-10">My Profile Page (All Users)</div>;
+// const ManageUsers = () => <div className="text-center py-10">Manage Users Page (Admin Only)</div>;
+// const MarkAttendance = () => <div className="text-center py-10">Mark Attendance Page (Teacher Only)</div>;
+// const MyAttendance = () => <div className="text-center py-10">My Attendance Page (Student Only)</div>;
+// const AllAttendance = () => <div className="text-center py-10">All Attendance Records (Admin Only)</div>;
+// const Reports = () => <div className="text-center py-10">Reports Page (Admin Only)</div>;
+// const StudentsList = () => <div className="text-center py-10">My Students Page (Teacher Only)</div>;
+// const ViewAttendance = () => <div className="text-center py-10">View Attendance Records (Teacher Only)</div>;
+// const Profile = () => <div className="text-center py-10">My Profile Page (All Users)</div>;
 
 function App() {
   const { user } = useContext(AuthContext);

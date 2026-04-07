@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 
 export const AuthContext = createContext();
 
@@ -14,12 +14,7 @@ export const AuthProvider = ({ children }) => {
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
-  const [loading, setLoading] = useState(true);
-
-  // Set loading false after initial localStorage hydration
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  const [loading, setLoading] = useState(false);
 
   // Save users to localStorage
   const saveUsersToLocalStorage = (userList) => {
@@ -97,7 +92,9 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     getAllUsers,
-    getUsersByRole
+    getUsersByRole,
+    setUsers,
+    saveUsersToLocalStorage
   };
 
   return (
