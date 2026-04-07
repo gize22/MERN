@@ -23,7 +23,7 @@ const Sidebar = () => {
       case 'admin':
         return [
           ...commonMenus,
-          { path: '/users', name: 'Manage Users', icon: '👥' },
+          { path: '/users', name: 'Manage Users' },
           { path: '/attendance/all', name: 'All Attendance' },
           { path: '/reports', name: 'Reports' },
         ];
