@@ -1,25 +1,23 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useEffect } from 'react';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(() => {
+    const storedUsers = localStorage.getItem('attendence_users');
+    return storedUsers ? JSON.parse(storedUsers) : [];
+  });
+
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem('attendence_current_user');
+    return storedUser ? JSON.parse(storedUser) : null;
+  });
+
   const [loading, setLoading] = useState(true);
 
-  // Load data from localStorage on app start
+  // Set loading false after initial localStorage hydration
   useEffect(() => {
-    const storedUsers = localStorage.getItem('attendence_users');
-    const storedUser = localStorage.getItem('attendence_current_user');
-    
-    if (storedUsers) {
-      setUsers(JSON.parse(storedUsers));
-    }
-    
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-    
     setLoading(false);
   }, []);
 
