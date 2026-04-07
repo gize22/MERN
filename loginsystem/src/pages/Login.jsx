@@ -126,13 +126,7 @@ const Login = () => {
           </Link>
         </p>
         
-        {/* Demo credentials hint (helpful for testing) */}
-        <div className="mt-6 p-3 bg-gray-50 rounded border border-gray-200">
-          <p className="text-xs text-gray-500 text-center">
-            Demo Credentials (for testing):<br/>
-            Email: john@example.com | Password: 123456
-          </p>
-        </div>
+
         
       </div>
     </div>
