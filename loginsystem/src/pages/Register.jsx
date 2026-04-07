@@ -57,6 +57,7 @@ const Register = () => {
       
       // If successful, redirect to dashboard
       navigate('/dashboard');
+      
     } catch (err) {
       // If error, display the error message
       setError(err.message);

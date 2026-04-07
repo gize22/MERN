@@ -28,12 +28,14 @@ export const AuthProvider = ({ children }) => {
 
   // Register function
   const register = async (name, email, password, role) => {
+    // 1. Check if email exists
     const existingUser = users.find(u => u.email === email);
     
+  
     if (existingUser) {
       throw new Error('Email already registered');
     }
-
+     // 2. Create user object
     const newUser = {
       id: Date.now(),
       name,
@@ -43,8 +45,9 @@ export const AuthProvider = ({ children }) => {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
-
+    // 3. Save to users array
     const updatedUsers = [...users, newUser];
+      // 4. Save to localStorage
     setUsers(updatedUsers);
     saveUsersToLocalStorage(updatedUsers);
     
