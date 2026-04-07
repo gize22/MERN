@@ -71,7 +71,7 @@ const Register = () => {
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         
         {/* Header */}
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-center text-green-800">
           Create an Account
         </h2>
         
@@ -87,7 +87,7 @@ const Register = () => {
           
           {/* Name Field */}
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-gray-700 text-sm font-bold mb-4">
               Full Name
             </label>
             <input
@@ -95,7 +95,7 @@ const Register = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your full name"
+              placeholder="Enter your name"
               disabled={isLoading}
             />
           </div>
@@ -103,7 +103,7 @@ const Register = () => {
           {/* Email Field */}
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
-              Email Address
+              Email 
             </label>
             <input
               type="email"
@@ -146,7 +146,7 @@ const Register = () => {
                   disabled={isLoading}
                 />
                 <span className="text-gray-700">Student</span>
-                <span className="text-xs text-gray-500 ml-2">- Can only view their attendance</span>
+                <span className="text-xs text-gray-500 ml-2"></span>
               </label>
               
               <label className="flex items-center">
@@ -159,7 +159,7 @@ const Register = () => {
                   disabled={isLoading}
                 />
                 <span className="text-gray-700">Teacher</span>
-                <span className="text-xs text-gray-500 ml-2">- Can mark and manage attendance</span>
+                <span className="text-xs text-gray-500 ml-2"></span>
               </label>
               
               <label className="flex items-center">
@@ -172,7 +172,7 @@ const Register = () => {
                   disabled={isLoading}
                 />
                 <span className="text-gray-700">Admin</span>
-                <span className="text-xs text-gray-500 ml-2">- Full system access</span>
+                <span className="text-xs text-gray-500 ml-2"></span>
               </label>
             </div>
           </div>
@@ -191,7 +191,7 @@ const Register = () => {
         {/* Link to Login Page */}
         <p className="mt-4 text-center text-gray-600">
           Already have an account?{' '}
-          <Link to="/login" className="text-blue-600 hover:underline">
+          <Link to="/login" className="text-blue-600 font-bold hover:underline">
             Login here
           </Link>
         </p>
