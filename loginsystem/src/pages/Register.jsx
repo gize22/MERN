@@ -57,7 +57,7 @@ const Register = () => {
       
       // If successful, redirect to dashboard
       navigate('/dashboard');
-      
+
     } catch (err) {
       // If error, display the error message
       setError(err.message);
@@ -77,6 +77,7 @@ const Register = () => {
         </h2>
         
         {/* Error Message Display */}
+        {/* && means: "If the thing on the left is true, then show the thing on the right" */}
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
             {error}

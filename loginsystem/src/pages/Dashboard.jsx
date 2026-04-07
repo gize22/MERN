@@ -16,7 +16,7 @@ const Dashboard = () => {
           You are logged in as a <span className="font-bold capitalize">{user?.role}</span>
         </p>
         
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4">
+        <div className="bg-blue-50 border-l-4 border-blue-500 rounded p-20">
           <p className="text-blue-700">
             {user?.role === 'admin' && "You have full system access. Manage users and view all attendance records."}
             {user?.role === 'teacher' && "You can mark attendance for your classes and view student records."}
