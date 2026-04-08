@@ -1,7 +1,9 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
@@ -10,7 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-const MONGODB_URI = 'mongodb+srv://gizachew:jalane@cluster0.qkrnuut.mongodb.net/todoapp?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
+
+console.log('🔄 Connecting to MongoDB...');
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
@@ -34,7 +38,7 @@ const todoSchema = new mongoose.Schema({
 
 const Todo = mongoose.model('Todo', todoSchema);
 
-// GET all todos
+// Routes
 app.get('/api/todos', async (req, res) => {
   try {
     const todos = await Todo.find().sort({ createdAt: -1 });
@@ -44,7 +48,6 @@ app.get('/api/todos', async (req, res) => {
   }
 });
 
-// POST create todo
 app.post('/api/todos', async (req, res) => {
   try {
     const todo = new Todo({
@@ -57,7 +60,6 @@ app.post('/api/todos', async (req, res) => {
   }
 });
 
-// PUT update todo
 app.put('/api/todos/:id', async (req, res) => {
   try {
     const todo = await Todo.findById(req.params.id);
@@ -72,7 +74,6 @@ app.put('/api/todos/:id', async (req, res) => {
   }
 });
 
-// DELETE todo
 app.delete('/api/todos/:id', async (req, res) => {
   try {
     const todo = await Todo.findByIdAndDelete(req.params.id);
