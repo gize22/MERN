@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   });
 
   const [user, setUser] = useState(() => {
-    const storedUser = localStorage.getItem('attendence_current_user');
+    const storedUser = localStorage.getItem('current_user');
     return storedUser ? JSON.parse(storedUser) : null;
   });
 
@@ -35,19 +35,19 @@ export const AuthProvider = ({ children }) => {
       id: Date.now(),
       name,
       email,
-      password,
+      password,  // Stored in plain text (NOT secure for production!)
       role,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
-    // 3. Save to users array
-    const updatedUsers = [...users, newUser];
-      // 4. Save to localStorage
-    setUsers(updatedUsers);
-    saveUsersToLocalStorage(updatedUsers);
+    // // 3. Save to users array
+    // const updatedUsers = [...users, newUser];
+    //   // 4. Save to localStorage
+    // setUsers(updatedUsers);
+    // saveUsersToLocalStorage(updatedUsers);
     
     setUser(newUser);
-    localStorage.setItem('attendence_current_user', JSON.stringify(newUser));
+    localStorage.setItem('current_user', JSON.stringify(newUser));
     
     return newUser;
   };
@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
     const foundUser = users.find(
       u => u.email === email && u.password === password
     );
-
+      
     if (!foundUser) {
       throw new Error('Invalid email or password');
     }
