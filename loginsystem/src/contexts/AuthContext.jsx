@@ -40,15 +40,15 @@ export const AuthProvider = ({ children }) => {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString()
     };
-    // // 3. Save to users array
-    // const updatedUsers = [...users, newUser];
-    //   // 4. Save to localStorage
-    // setUsers(updatedUsers);
-    // saveUsersToLocalStorage(updatedUsers);
+    // 3. Save to users array
+    const updatedUsers = [...users, newUser];
+      // 4. Save to localStorage
+    setUsers(updatedUsers);
+    saveUsersToLocalStorage(updatedUsers);
     
     setUser(newUser);
-    localStorage.setItem('current_user', JSON.stringify(newUser));
-    
+    localStorage.setItem('attendence_current_user', JSON.stringify(newUser));
+                              
     return newUser;
   };
 
